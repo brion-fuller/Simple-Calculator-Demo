@@ -1,7 +1,6 @@
 Simple-Calculator-Demo
 =========================
-
-Simple calculator demo using `react`, `redux`, `es2017`.  
+Simple calculator demo using [react](http://facebook.github.io/react/), [redux](http://github.com/reactjs/redux), [babel](http://babeljs.io/), [react-hot-loader@3](http://github.com/gaearon/react-hot-loader/tree/next), [webpackv2](http://github.com/webpack/webpack/tree/master).  
 
 ## Installation
 
