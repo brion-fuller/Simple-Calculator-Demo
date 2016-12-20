@@ -1,0 +1,13 @@
+.container {
+    border: 1px solid black;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.row{
+    display: block;
+}
+.double-button{
+    width: 100px;
+}

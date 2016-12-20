@@ -1,0 +1,11 @@
+.container {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    padding: 0.8em;
+    font-size: 1em;
+    box-sizing: border-box;
+    text-align: right;
+}

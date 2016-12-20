@@ -1,0 +1,16 @@
+.container{
+    border: 1px solid black;
+    border-radius: 0.4em;
+    padding: 0.4em;
+    margin: 0.4em;
+    display: inline-block;
+    height: 3em;
+    font-size: 1em;
+    text-align: center;
+}
+.md{
+    width: 3em;
+}
+.lg{
+    width: 6.8em;
+}
