@@ -12,8 +12,6 @@ Simple calculator demo using [react](http://facebook.github.io/react/), [redux](
     start developing
 ```
 
-This assumes that you’re using [npm](http://npmjs.com/) package manager with a module bundler like [Webpack](http://webpack.github.io) or [Browserify](http://browserify.org/) to consume `es6 modules`.
-
 ## How Does It Work?
 
 For running a development build run:
