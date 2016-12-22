@@ -9,7 +9,8 @@
     "deploy": "npm run prod && http-server ./dist -p 80",
     "test": "mocha --require ./mocha.config.js --compilers js:babel-register ./src/**/*.spec.js --recursive",
     "test:watch": "mocha --require ./mocha.config.js --compilers js:babel-register ./src/**/*.spec.js --recursive --watch",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ./mocha.config.js src/**/*.spec.js"
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ./mocha.config.js src/**/*.spec.js",
+    "lint": "eslint src"
   },
   "author": "Brion L Fuller II",
   "license": "MIT",
@@ -29,6 +30,11 @@
     "chai": "^3.5.0",
     "clean-webpack-plugin": "^0.1.14",
     "css-loader": "^0.26.1",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.1.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-webpack-externals-plugin": "^2.2.1",
     "html-webpack-plugin": "^2.24.1",
