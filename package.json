@@ -9,7 +9,7 @@
     "deploy": "npm run prod && http-server ./dist -p 80",
     "test": "mocha --require ./mocha.config.js --compilers js:babel-register ./src/**/*.spec.js --recursive",
     "test:watch": "mocha --require ./mocha.config.js --compilers js:babel-register ./src/**/*.spec.js --recursive --watch",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ./mocha.config.js src/**/*.spec.js",
+    "coverage": "istanbul cover --dir report ./node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ./mocha.config.js src/**/*.spec.js",
     "lint": "eslint src"
   },
   "author": "Brion L Fuller II",

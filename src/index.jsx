@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 import { App } from './App';
 
-export const render = () => {
+const render = () => {
   ReactDOM.render(<App />, document.getElementById('react'));
-}
+};
 
 render();
 

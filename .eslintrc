@@ -11,5 +11,7 @@
     },
     "extends": "airbnb",
     "rules": {
-    }
+        "no-use-before-define": [1, {"functions": false}],
+        "import/no-extraneous-dependencies": [1]
+    }    
 }

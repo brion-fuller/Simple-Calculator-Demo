@@ -3,9 +3,9 @@ import { Provider } from 'react-redux';
 
 import { Calculator } from './Calculator/Calculator';
 
-import { store } from './store';
+import store from './store';
 
-export const App = () => (
+export default App = () => (
     <Provider store={store}>
         <Calculator />
     </Provider>
