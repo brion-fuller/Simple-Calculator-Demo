@@ -17,3 +17,10 @@ export const clearPress = value => ({
   type: 'CLEAR_PRESS',
   value,
 });
+
+export default {
+  clearPress,
+  evalPress,
+  operationPress,
+  numberPress,
+};

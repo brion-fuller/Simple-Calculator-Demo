@@ -22,7 +22,7 @@ module.exports = {
         publicPath: '/'
     },
     context: src,
-    devtool: 'eval',
+    devtool: 'source-map',
     resolve: {
         extensions: ['.js', '.jsx']
     },

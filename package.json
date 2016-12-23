@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-calculator",
+  "name": "react-redux-dashboard",
   "version": "0.1.0",
-  "description": "Simple Calculator application done using `react`, `redux`, and es2017",
+  "description": "",
   "main": "src/index.jsx",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.config.dev.js",
@@ -10,7 +10,7 @@
     "test": "mocha --require ./mocha.config.js --compilers js:babel-register ./src/**/*.spec.js --recursive",
     "test:watch": "mocha --require ./mocha.config.js --compilers js:babel-register ./src/**/*.spec.js --recursive --watch",
     "coverage": "istanbul cover --dir report ./node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ./mocha.config.js src/**/*.spec.js",
-    "lint": "eslint src"
+    "lint": "eslint src --ext js --ext jsx"
   },
   "author": "Brion L Fuller II",
   "license": "MIT",

@@ -7,11 +7,13 @@
         "mocha": true
     },
     "ecmaFeatures": {
-        "modules": true
+        "modules": true,
+        "jsx": true
     },
     "extends": "airbnb",
     "rules": {
         "no-use-before-define": [1, {"functions": false}],
-        "import/no-extraneous-dependencies": [1]
+        "import/no-extraneous-dependencies": [1],
+        "react/prop-types" : [1]
     }    
 }
