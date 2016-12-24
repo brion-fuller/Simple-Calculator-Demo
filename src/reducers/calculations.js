@@ -36,7 +36,7 @@ function clearPress(state) {
 function evalPress(state) {
   let newState = {};
   try {
-    const newText = state.value.join(' ');
+    const newText = state.value.join('');
     newState = {
       value: [eval(newText)], // eslint-disable-line no-eval
       eval: true,
@@ -52,10 +52,11 @@ function evalPress(state) {
 
 function numberPress(state, action) {
   const i = state.value.length - 1;
-  let value = state.value[i];
-  if (i >= 0 && !isNaN(value)) {
-    if (action.value !== '.' || !value.toString().match(/\./)) {
-      value = `${value}${action.value}`;
+  const value = [...state.value];
+  const previousValue = value[i];
+  if (!isNaN(previousValue)) {
+    if (action.value !== '.' || !previousValue.toString().match(/\./)) {
+      value.push(action.value);
     }
   } else {
     value.push(action.value);
@@ -70,11 +71,12 @@ function numberPress(state, action) {
 function operationPress(state, action) {
   const i = state.value.length - 1;
   const errors = [...state.errors];
-  let value = [...state.value[i]];
+  const value = [...state.value];
+  let previousValue = value[i];
 
-  if (i >= 0 && operations[value.toString()]) {
-    value = action.value;
-  } else if (i >= 0 && !isNaN(value)) {
+  if (i >= 0 && operations[previousValue.toString()]) {
+    previousValue = action.value;
+  } else if (i >= 0 && !isNaN(previousValue)) {
     value.push(action.value);
   } else {
     errors.push('Invalid operation input');
