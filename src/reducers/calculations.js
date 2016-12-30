@@ -54,7 +54,7 @@ function numberPress(state, action) {
   const i = state.value.length - 1;
   const value = [...state.value];
   const previousValue = value[i];
-  if (!isNaN(previousValue)) {
+  if (!isNaN(previousValue) && !state.eval) {
     if (action.value !== '.' || !previousValue.toString().match(/\./)) {
       value.push(action.value);
     }
@@ -62,8 +62,8 @@ function numberPress(state, action) {
     value.push(action.value);
   }
   const newState = {
-    value,
-    eval: state.eval ? false : state.eval,
+    value: state.eval ? [action.value] : value,
+    eval: false,
   };
   return { ...state, ...newState };
 }
