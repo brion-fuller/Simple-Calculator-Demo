@@ -1,0 +1,16 @@
+@import 'styles';
+
+.container {
+  @apply --border;
+  color: var(--font-color);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 10em;
+  height: 100%;
+}
+
+.button {
+  @apply --border;
+
+}

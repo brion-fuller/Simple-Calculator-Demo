@@ -5,6 +5,7 @@
   "main": "src/index.jsx",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.dev.js",
     "prod": "webpack --config webpack.config.prod.js",
     "deploy": "npm run prod && http-server ./dist -p 80",
     "test": "mocha --require ./mocha.config.js --compilers js:babel-register ./src/**/*.spec.js --recursive",
@@ -15,10 +16,15 @@
   "author": "Brion L Fuller II",
   "license": "MIT",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "react": "^15.4.1",
+    "react-burger-menu": "^1.10.10",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
-    "redux": "^3.6.0"
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "redux": "^3.6.0",
+    "redux-burger-menu": "^0.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -43,6 +49,11 @@
     "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^9.9.1",
     "mocha": "^3.2.0",
+    "node-sass": "^4.1.1",
+    "postcss": "^5.2.8",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.0.0",
+    "postcss-loader": "^1.2.1",
     "react-addons-test-utils": "^15.4.1",
     "react-hot-loader": "^3.0.0-beta.6",
     "sinon": "^1.17.6",

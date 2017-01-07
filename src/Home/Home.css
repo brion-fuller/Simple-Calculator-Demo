@@ -1,0 +1,9 @@
+.title {
+    font-size: 19.5px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    height: 100vw;
+}

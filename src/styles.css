@@ -1,0 +1,23 @@
+:root {
+  /*Font*/
+  --font-size: 16px;
+  --font-size-sm: 0.8em;
+  --font-size-md: 1em;
+  --font-size-lg: 1.2em;
+  /*Colors*/
+  --font-color: #000000;
+  --secondary-font-color: #333333;
+  --bkgd-color: #FFFFFF;
+  --secondary-bkgd-color: #F5F3EE;
+  --border-color: var(--font-color);
+  --secondary-border-color: var(--secondary-font-color);
+
+  /*Border*/
+  --border-width: 1px;
+  --border: {
+      border-width: var(--border-width);
+      border-style: solid;
+      border-color: var(--border-color);
+      border-radius: 0.5em;
+  }
+}

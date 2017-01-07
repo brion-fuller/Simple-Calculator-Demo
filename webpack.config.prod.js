@@ -14,6 +14,11 @@ module.exports = {
     main: [
       resolve(src, 'index'),
     ],
+    vendor: [
+      'react',
+      'redux',
+      'react-redux',
+    ],
   },
   output: {
     filename: '[name].js',
@@ -25,9 +30,22 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   module: {
-    rules:[
-      { test: /\.(jsx?)$/, include: [src], use: ['babel-loader'] },
-      { test: /\.css$/, include: [src], loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: { loader: 'css-loader', query: { modules: true, localIdentName: '[hash:base64:15]', sourceMap: true, minimize: true } } }) },
+    rules: [
+      {
+        test: /\.(jsx?)$/,
+        include: [src],
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.css$/,
+        include: [src],
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: {
+            loader: 'css-loader?modules&importLoaders=1&minimize&localIdentName=[hash:base64:10]!postcss-loader',
+          },
+        }),
+      },
     ],
   },
   plugins: [
@@ -41,6 +59,7 @@ module.exports = {
         NODE_ENV: JSON.stringify('production'),
       },
     }),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
     new ExtractTextPlugin('styles.min.css'),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.NamedModulesPlugin(),

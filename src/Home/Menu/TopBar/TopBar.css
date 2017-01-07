@@ -1,0 +1,9 @@
+@import 'styles';
+
+.container {
+  /*@apply --border;*/
+  color: var(--font-color);
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}

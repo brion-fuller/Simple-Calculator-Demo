@@ -34,7 +34,7 @@ module.exports = {
   module: {
     rules: [
       { test: /\.(jsx?)$/, include: [src], use: [{ loader: 'babel-loader', query: { babelrc: false, presets: [['es2015', { modules: false }], 'react', 'stage-0'] } }] },
-      { test: /\.css$/, include: [src], use: ['style-loader', { loader: 'css-loader', query: { modules: true, localIdentName: '[path][name]---[local]---[hash:base64:5]', sourceMap: true } }] },
+      { test: /\.css$/, include: [src], use: ['style-loader', { loader: 'css-loader', query: { modules: true, localIdentName: '[path][name]---[local]---[hash:base64:5]', sourceMap: true } }, 'postcss-loader'] },
     ],
   },
   devServer: {
