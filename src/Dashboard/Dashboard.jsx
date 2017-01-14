@@ -3,5 +3,7 @@ import React from 'react';
 import styles from './Dashboard.css';
 
 export default () => (
-  <div className={styles.container} />
+  <div className={styles.container}>
+    Dashboard Content
+  </div>
 );

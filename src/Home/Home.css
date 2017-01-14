@@ -1,9 +1,45 @@
+@import 'styles';
+
 .title {
-    font-size: 19.5px;
+    font-size: var(--font-size-md);
 }
 .container {
     display: flex;
     flex-direction: column;
-    width: 100vh;
-    height: 100vw;
+    width: 100vw;
+    height: 100vh;
+}
+.header, .footer {
+    height: var(--height-lg);
+}
+
+.body {
+    border: 1px solid black;
+    height: calc( 100% - var(--height-lg)*2);
+    box-sizing: border-box;
+}
+.body > div {
+    vertical-align: top;
+}
+
+@media (--breakpoint-sm){
+    .content {
+        width: 100%;
+    }
+}
+
+.sidebar-item{
+    display: block;
+}
+.sidebar-item > a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.content {
+    /*@apply --border;*/
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
 }

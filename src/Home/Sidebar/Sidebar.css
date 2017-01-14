@@ -1,0 +1,9 @@
+@import 'styles';
+
+.container {
+    display: inline-block;
+    width: 20%; /*TODO: remove*/
+    height: 100%;
+    background: lightgrey;
+    box-sizing: border-box;
+}

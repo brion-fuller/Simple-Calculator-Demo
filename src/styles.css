@@ -3,7 +3,7 @@
   --font-size: 16px;
   --font-size-sm: 0.8em;
   --font-size-md: 1em;
-  --font-size-lg: 1.2em;
+  --font-size-lg: 2em;
   /*Colors*/
   --font-color: #000000;
   --secondary-font-color: #333333;
@@ -19,5 +19,10 @@
       border-style: solid;
       border-color: var(--border-color);
       border-radius: 0.5em;
-  }
+  };
+
+  /*Heights*/
+  --height-lg: var(--font-size-lg);
 }
+
+@custom-media --breakpoint-sm (width < 20em);

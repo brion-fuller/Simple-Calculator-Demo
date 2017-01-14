@@ -3,16 +3,24 @@ import { Link } from 'react-router';
 import styles from './Home.css';
 
 //import Menu from './Menu/Menu';
+import Sidebar from './Sidebar/Sidebar';
 
 export default ({ children }) => (
   <div className={styles.container}>
+    <header className={styles.header}>Header</header>
     <div className={styles.body}>
-      <ol>
-        <Link to="dashboard">Dashboard</Link>
-        <Link to="calculator">Calculator</Link>
-      </ol>
+      <Sidebar>
+        <div className={styles['sidebar-item']}>
+          <Link to="dashboard">Dashboard</Link>
+        </div>
+        <div className={styles['sidebar-item']}>
+          <Link to="calculator">Calculator</Link>
+        </div>
+      </Sidebar>
+      <div className={styles.content}>
+        {children}
+      </div>
     </div>
-    <div className={styles.sidebar}>Side Bar</div>
-    <div className={styles.ads}>Ads</div>
+    <footer className={styles.footer}>Footer</footer>
   </div>
 );
